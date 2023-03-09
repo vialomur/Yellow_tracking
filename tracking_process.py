@@ -30,7 +30,7 @@ def Track_Yellow():
         # Finding position of all contours
         if len(mask_contours) != 0:
             for mask_contour in mask_contours:
-                if cv2.contourArea(mask_contour) > 1000:
+                if cv2.contourArea(mask_contour) > 500:
                     x, y, w, h = cv2.boundingRect(mask_contour)
                     cv2.rectangle(video, (x, y), (x + w, y + h), (0, 0, 255), 3)  # drawing rectangle
 
